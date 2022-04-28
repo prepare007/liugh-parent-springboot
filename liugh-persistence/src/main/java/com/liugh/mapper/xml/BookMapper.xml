@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liugh.mapper.BookMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.liugh.entity.Book">
+        <id column="book_id" property="bookId" />
+        <result column="book_name" property="bookName" />
+        <result column="state" property="state" />
+        <result column="cover" property="cover" />
+        <result column="update_time" property="updateTime" />
+        <result column="create_time" property="createTime" />
+        <result column="publish" property="publish" />
+        <result column="author" property="author" />
+        <result column="total_page" property="totalPage" />
+        <result column="cur_page" property="curPage" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        book_id AS bookId, book_name AS bookName, state, cover, update_time AS updateTime, create_time AS createTime, publish, author, cur_page AS curPage, total_page AS totalPage
+    </sql>
+
+</mapper>
